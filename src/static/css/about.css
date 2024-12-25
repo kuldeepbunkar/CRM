@@ -1,0 +1,79 @@
+.about-section {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+.company-intro {
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.company-intro .mission {
+    font-size: 1.2rem;
+    color: #666;
+    max-width: 800px;
+    margin: 1rem auto;
+}
+
+.company-details {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin: 3rem 0;
+}
+
+.info-card {
+    background: white;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.info-card h3 {
+    color: #2c3e50;
+    margin-bottom: 1rem;
+}
+
+.info-card ul {
+    list-style: none;
+    padding: 0;
+}
+
+.info-card ul li {
+    margin: 0.5rem 0;
+    color: #666;
+}
+
+.team-section, .contact-section {
+    margin: 3rem 0;
+}
+
+.contact-info {
+    background: #f8f9fa;
+    padding: 2rem;
+    border-radius: 8px;
+    text-align: center;
+}
+
+.contact-info strong {
+    color: #2c3e50;
+}
+
+.main-logo {
+    width: 200px;
+    height: auto;
+    margin-bottom: 2rem;
+    animation: fadeInDown 1s ease-out;
+}
+
+@keyframes fadeInDown {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+} 

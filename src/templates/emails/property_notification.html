@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>New Property Alert</title>
+    <style>
+        .property-details {
+            padding: 20px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            margin: 20px 0;
+        }
+        .price {
+            color: #2ecc71;
+            font-size: 24px;
+            font-weight: bold;
+        }
+        .cta-button {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #3498db;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+        }
+        .header {
+            text-align: center;
+            padding: 20px;
+            background: #f8f9fa;
+            margin-bottom: 20px;
+        }
+        .header img {
+            max-width: 200px;
+            height: auto;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <img src="cid:company_logo" alt="Next Innovation Realty" style="width: 200px; height: auto;">
+    </div>
+    <h2>New Property Listing Alert</h2>
+    <p>Dear {{ contact.name }},</p>
+    
+    <p>We thought you might be interested in this new property:</p>
+    
+    <div class="property-details">
+        <h3>{{ property.name }}</h3>
+        <p><strong>Location:</strong> {{ property.address }}</p>
+        <p><strong>Type:</strong> {{ property.type }}</p>
+        <p class="price">
+            {% if property.price %}
+                ₹{{ '{:,.2f}'.format(property.price|float) }}
+            {% else %}
+                Price on Request
+            {% endif %}
+        </p>
+        
+        <h4>Features:</h4>
+        <ul>
+            {% if property.features %}
+            {% for feature in property.features %}
+            <li>{{ feature }}</li>
+            {% endfor %}
+            {% else %}
+            <li>Contact us for detailed features</li>
+            {% endif %}
+        </ul>
+    </div>
+    
+    <p>
+        <a href="{{ view_url }}" class="cta-button">View Property Details</a>
+    </p>
+    
+    <p>
+        To schedule a viewing or for more information, please contact us at:<br>
+        Helpline: +91 8889734872<br>
+        Email: thenextinnovationrealty.in@gmail.com
+    </p>
+    
+    <p>Best regards,<br>
+    Next Innovation Realty Team<br>
+    <small>
+        Head Office: Next Innovation Realty<br>
+        Contact: +91 8889734872<br>
+        Email: thenextinnovationrealty.in@gmail.com<br>
+        Website: www.thenextinnovationrealty.in
+    </small>
+    </p>
+</body>
+</html> 

@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="properties-list">
+    <h1>Properties</h1>
+    <a href="{{ url_for('web.add_property') }}" class="btn btn-primary">Add Property</a>
+    
+    <div class="property-grid">
+        {% for property in properties %}
+        <div class="property-card">
+            <h3>{{ property.name }}</h3>
+            <p>{{ property.address }}</p>
+            <p class="price">{{ property.price | currency }}</p>
+            <p class="status">{{ property.status }}</p>
+            <div class="actions">
+                <a href="{{ url_for('web.edit_property', id=property.id) }}" class="btn">Edit</a>
+                <a href="{{ url_for('web.view_property', id=property.id) }}" class="btn">View</a>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+</div>
+{% endblock %} 

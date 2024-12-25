@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Monthly Sales Report</title>
+    <style>
+        table { border-collapse: collapse; width: 100%; }
+        th, td { border: 1px solid black; padding: 8px; }
+    </style>
+</head>
+<body>
+    <h1>Monthly Sales Report - {month_year}</h1>
+    <div class="summary">
+        <h2>Summary</h2>
+        <p>Total Sales: ${total_sales}</p>
+        <p>Total Transactions: {transaction_count}</p>
+        <p>Average Sale: ${average_sale}</p>
+    </div>
+    <div class="details">
+        <h2>Transaction Details</h2>
+        <table>
+            <tr>
+                <th>Date</th>
+                <th>Property</th>
+                <th>Amount</th>
+                <th>Status</th>
+            </tr>
+            {transaction_rows}
+        </table>
+    </div>
+</body>
+</html> 

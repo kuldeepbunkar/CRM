@@ -1,0 +1,70 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="about-section">
+    <div class="company-intro">
+        <div class="logo-container">
+            <img src="{{ url_for('static', filename='images/logo.png') }}" alt="Next Innovation Realty Logo" class="main-logo">
+        </div>
+        <h1>About Next Innovation Realty</h1>
+        <p class="mission">
+            Our mission is to provide exceptional real estate services with innovation and integrity, 
+            making property dreams a reality for our clients.
+        </p>
+    </div>
+
+    <div class="company-details">
+        <h2>Company Information</h2>
+        <div class="info-card">
+            <h3>Contact Details</h3>
+            <ul>
+                <li><strong>Helpline:</strong> +91 8889734872</li>
+                <li><strong>Email:</strong> thenextinnovationrealty.in@gmail.com</li>
+                <li><strong>Website:</strong> www.thenextinnovationrealty.in</li>
+            </ul>
+        </div>
+
+        <div class="info-card">
+            <h3>Our Services</h3>
+            <ul>
+                <li>Property Sales and Purchase</li>
+                <li>Property Management</li>
+                <li>Real Estate Consultation</li>
+                <li>Investment Advisory</li>
+                <li>Property Valuation</li>
+            </ul>
+        </div>
+
+        <div class="info-card">
+            <h3>Why Choose Us</h3>
+            <ul>
+                <li>Expert Market Knowledge</li>
+                <li>Professional Team</li>
+                <li>Transparent Dealings</li>
+                <li>Innovative Solutions</li>
+                <li>Customer-Centric Approach</li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="team-section">
+        <h2>Our Team</h2>
+        <p>
+            Our team of experienced professionals is dedicated to providing the best real estate 
+            solutions for our clients. With years of market experience and deep industry knowledge, 
+            we ensure that every client receives personalized attention and expert guidance.
+        </p>
+    </div>
+
+    <div class="contact-section">
+        <h2>Get in Touch</h2>
+        <div class="contact-info">
+            <p>
+                For inquiries and consultations, please contact us:<br>
+                <strong>Helpline:</strong> +91 8889734872<br>
+                <strong>Email:</strong> thenextinnovationrealty.in@gmail.com
+            </p>
+        </div>
+    </div>
+</div>
+{% endblock %} 

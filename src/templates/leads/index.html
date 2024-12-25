@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="leads-container">
+    <h1>Leads</h1>
+    <div class="leads-grid">
+        {% for lead in leads %}
+        <div class="lead-card">
+            <h3>{{ lead.name }}</h3>
+            <p>{{ lead.email }}</p>
+            <p>Source: {{ lead.source }}</p>
+            <p>Status: {{ lead.status }}</p>
+            <div class="actions">
+                <a href="{{ url_for('web.view_lead', id=lead.id) }}" class="btn">View Details</a>
+                <button onclick="updateLeadStatus('{{ lead.id }}')" class="btn">Update Status</button>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+</div>
+{% endblock %} 

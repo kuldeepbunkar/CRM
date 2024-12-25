@@ -1,0 +1,33 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="dashboard">
+    <div class="stats-cards">
+        <div class="card">
+            <h3>Active Properties</h3>
+            <p class="number">{{ properties|length }}</p>
+        </div>
+        <div class="card">
+            <h3>New Leads</h3>
+            <p class="number">{{ leads|length }}</p>
+        </div>
+        <div class="card">
+            <h3>Pending Tasks</h3>
+            <p class="number">{{ tasks|length }}</p>
+        </div>
+    </div>
+
+    <div class="recent-activities">
+        <h2>Recent Activities</h2>
+        <div class="activity-list">
+            {% for task in tasks %}
+            <div class="activity-item">
+                <span class="date">{{ task.due_date }}</span>
+                <span class="title">{{ task.title }}</span>
+                <span class="status">{{ task.status }}</span>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</div>
+{% endblock %} 
